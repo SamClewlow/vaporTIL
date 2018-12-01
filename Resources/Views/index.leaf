@@ -1,6 +1,6 @@
 #set("content") {
 
-    <img src="/images/logo.jpg" class="mx-auto d-block" />
+    <img src="/images/logo.png" class="mx-auto d-block" />
         <h1>Acronyms</h1>
 
         #if(acronyms) {
