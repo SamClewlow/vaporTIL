@@ -1,14 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="utf-8" />
-        <title>#(acronym.short) | Acronyms</title>
-    </head>
-    <body>
+#set("content") {
         <h1>#(acronym.short)</h1>
         <h2>#(acronym.long)</h2>
         <p>
-            Created by #(creator.userName)
+           <a href="/users/#(creator.id)"> Created by #(creator.userName)</a>
         </p>
-    </body>
-</html>
+        <p>
+           #if(categories) {
+                Categorised as 
+                #for(category in categories) {
+                    <a href=/categories/#(category.id)>#(category.name)</a>         
+                } 
+           } else {
+                Currnetly uncategorised                   
+           }
+           
+        </p>
+
+        <form method="post" action="/acronyms/#(acronym.id)/delete">
+            <input class="btn btn-danger" type="submit" value="Delete"/>
+        </form>
+}
+#embed("base")

@@ -1,0 +1,19 @@
+#set("content") {
+    <h1>Create an Acronym</h1>
+
+    <form method="post">
+
+        <div class="form-group">
+            <label for="acronymShort">Acronym Short</label>
+            <input type="text" name="acronymShort" class="form-control" id="acronymShort"/>
+        </div>
+        
+        <div class="form-group">
+            <label for="acronymLong">Acronym Long</label>
+            <input type="text" name="acronymLong" class="form-control" id="acronymLong"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+}
+#embed("base")

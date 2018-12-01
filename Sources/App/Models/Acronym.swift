@@ -5,7 +5,7 @@ final class Acronym: Codable {
     var id: Int?
     var short: String
     var long: String
-    let creatorID: User.ID
+    var creatorID: User.ID
     
     init(short: String, long: String, creatorID: User.ID) {
         self.short = short
